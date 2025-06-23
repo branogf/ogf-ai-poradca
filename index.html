@@ -1,21 +1,23 @@
-
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="sk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OGF AI Poradca</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-    iframe { border: none; width: 100%; height: 80vh; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OGF AI Poradca</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Vitajte! 👋</h1>
-  <p>Na tomto mieste bude čoskoro váš OGF AI poradca.</p>
-  <p>Ak potrebujete pomoc, kontaktujte nás: <br/>
-     📧 <a href="mailto:info@ogf.sk">info@ogf.sk</a><br/>
-     ☎️ +421 904 363 600
-  </p>
+<div id="chat-container">
+  <div id="chat-header">
+    <h2>Poradca OGF 🤖</h2>
+  </div>
+  <div id="chat-messages"></div>
+  <form id="chat-form">
+    <input type="text" id="chat-input" placeholder="Napíš otázku..." autocomplete="off" />
+    <button type="submit">Poslať</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
