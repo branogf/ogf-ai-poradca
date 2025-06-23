@@ -1,23 +1,40 @@
-document.getElementById('chat-form').addEventListener('submit', function(event) {
-  event.preventDefault();
+#chat-container {
+  background-color: white; /* biele pozadie */
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 350px;
+  height: 400px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000; /* čierny text */
+  overflow: hidden;
+}
 
-  const input = document.getElementById('chat-input');
-  const message = input.value.trim();
-  if (!message) return;
+#chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
 
-  const messagesContainer = document.getElementById('chat-messages');
+#chat-input {
+  width: 80%;
+  padding: 5px;
+}
 
-  // Zobraziť správu používateľa
-  const userMessage = document.createElement('div');
-  userMessage.textContent = "Ty: " + message;
-  messagesContainer.appendChild(userMessage);
+#chat-form button {
+  width: 18%;
+  padding: 5px;
+  background-color: #3cbf47;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-  // Tu by si pridal volanie na AI backend, ale pre demo len echo
-  const botReply = document.createElement('div');
-  botReply.textContent = "Poradca OGF: " + message;
-  botReply.style.color = '#3cbf47';
-  messagesContainer.appendChild(botReply);
-
-  input.value = '';
-  messagesContainer.scrollTop = messagesContainer.scrollHeight;
-});
+#chat-header {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
