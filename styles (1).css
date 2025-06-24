@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+#chat-container {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 350px;
+  max-height: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10000; /* aby bol nad všetkým */
+}
+
+/* Pridáme max-width a max-height, aby sa okno nevyťahovalo mimo */
+@media (max-width: 400px) {
+  #chat-container {
+    width: 90vw; /* šírka 90% viewportu na mobiloch */
+    max-height: 70vh; /* max výška 70% viewportu */
+    right: 5vw; /* odsadenie od pravého okraja */
+    bottom: 20px; /* odsadenie od spodného okraja */
+  }
+
+#chat-header {
+  background-color: #6CBF47;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+}
+
+#chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+  color: #333;
+}
+
+#chat-form {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#chat-form button {
+  background-color: #6CBF47;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#chat-form button:hover {
+  background-color: #5ba13b;
+}
+
+.user-message {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000; /* čierna */
+}
+
+.bot-message {
+  color: #3cbf47; /* zelená */
+  margin-bottom: 8px;
+  font-style: italic;
+}

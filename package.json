@@ -1,0 +1,19 @@
+{
+  "name": "ogf-ai-backend",
+  "version": "1.0.0",
+  "main": "chat.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node chat.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "openai": "^5.7.0"
+  }
+}
